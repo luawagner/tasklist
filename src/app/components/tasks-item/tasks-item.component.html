@@ -1,0 +1,14 @@
+<div class="task"
+(click)="onToggle(task)"
+[ngClass]="{ reminder: task.reminder}">
+<!--quiero que se aplique la clase task.reminder si la tarea tiene ese valor en true-->
+
+
+<h3>{{task.text}}
+    <!--le indico mediante un binding property el icono que debe montar, previamente declarado en el componente.ts-->
+    <fa-icon [icon]="faTimes"
+    [ngStyle]="{'color':'red'}"
+    (click)="onDelete(task)"> <!--captura la tarea sobre la que se ejecutó el click-->
+    </fa-icon></h3>
+  <p>{{task.day}}</p>
+</div>

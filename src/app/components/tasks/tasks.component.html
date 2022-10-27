@@ -1,0 +1,11 @@
+
+<!--usamos la directiva ngFor para reccorrer el array de tareas e imprimir cada uno como un componente "tasks-item"-->
+<!--el task.component le pasa cada elemento a task-item.component en la variable "task" -->
+<app-tasks-item *ngFor="let task of tasks" [task]="task"
+(onDeleteTask) = "deleteTask(task)"
+(onToggleReminder) = "toggleReminder(task)"
+>
+<!--onDeleteTask recibe el evento y llama a la funcion deleteTask alojada en task.component-->
+<!--onToggleReminder recibe el evento y ejecuta la funcion toggleReminder con la tarea como parametro-->
+<!--las funciones que llamamos en el template siempre estaran en el ts del propio componente-->
+</app-tasks-item>
