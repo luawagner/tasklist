@@ -1,4 +1,7 @@
 
+<app-add-task></app-add-task>
+
+
 <!--usamos la directiva ngFor para reccorrer el array de tareas e imprimir cada uno como un componente "tasks-item"-->
 <!--el task.component le pasa cada elemento a task-item.component en la variable "task" -->
 <app-tasks-item *ngFor="let task of tasks" [task]="task"
