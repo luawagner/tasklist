@@ -1,6 +1,8 @@
 
-<app-add-task></app-add-task>
-
+<app-add-task
+(onAddTask)="addTask($event)"
+></app-add-task>
+<!--recibimos en evento que nos trae onAddTask y se lo pasamos como parametro a la funcion addTask()-->
 
 <!--usamos la directiva ngFor para reccorrer el array de tareas e imprimir cada uno como un componente "tasks-item"-->
 <!--el task.component le pasa cada elemento a task-item.component en la variable "task" -->

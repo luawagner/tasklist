@@ -43,4 +43,16 @@ export class TasksComponent implements OnInit {
   //una vez que tenemos ese valor modificado se lo pasamos al servicio para que lo modifique
   //en la base de datos
   }
+
+  //recibimos el evento que trae onAddTask y lo procesamos con addTask()
+      //llamo al metodo del servicio que defini para guardar la tarea
+      //tambien debo pasarselo al array de tareas que se muestra en el componente de lista de tareas
+
+  addTask(task:Task){
+    this.taskService.addTask(task).subscribe((task)=>{
+      this.tasks.push(task)
+    })
+
+}
+
 }
